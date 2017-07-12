@@ -1,0 +1,34 @@
+mysql> SELECT accountId,COUNT(accountId) FROM Account JOIN AddressBook ON Account.id = AddressBook.id GROUP BY accountId ORDER BY COUNT(accountId)DESC LIMIT 10;
++-----------+------------------+
+| accountId | COUNT(accountId) |
++-----------+------------------+
+|         5 |               18 |
+|        42 |               18 |
+|        14 |               17 |
+|        58 |               17 |
+|        76 |               15 |
+|        77 |               14 |
+|        95 |               14 |
+|        23 |               14 |
+|         2 |               14 |
+|        71 |               14 |
++-----------+------------------+
+10 rows in set (0.00 sec)
+
+
+mysql> SELECT accountId,COUNT(accountId) FROM AddressBook JOIN Entry ON AddressBook.id = Entry.id GROUP BY accountId ORDER BY COUNT(accountId)DESC LIMIT 10;                                                                                                                                        
++-----------+------------------+
+| accountId | COUNT(accountId) |
++-----------+------------------+
+|         5 |               19 |
+|        14 |               19 |
+|        42 |               18 |
+|        58 |               18 |
+|         2 |               17 |
+|        76 |               16 |
+|        20 |               16 |
+|        77 |               15 |
+|        23 |               15 |
+|        71 |               15 |
++-----------+------------------+
+10 rows in set (0.01 sec)
