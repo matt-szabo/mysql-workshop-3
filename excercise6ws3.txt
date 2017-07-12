@@ -1,0 +1,10 @@
+**List all of the phone numbers for Jenkins, Charlotte**
+
+mysql> SELECT Phone.id,Phone.entryId,Phone.type,Phone.subtype,Phone.content FROM Entry JOIN Phone ON Entry.id = Phone.id WHERE firstName='Charlotte' AND lastName='Jenkins';  
++------+---------+-------+---------+----------------+
+| id   | entryId | type  | subtype | content        |
++------+---------+-------+---------+----------------+
+| 1057 |     566 | other | fax     | (701) 887-9129 |
++------+---------+-------+---------+----------------+
+1 row in set (0.03 sec)
+
