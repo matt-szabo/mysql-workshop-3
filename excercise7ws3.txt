@@ -1,0 +1,61 @@
+mysql> SELECT DISTINCT(SUBSTRING_INDEX(content,'@', -1)) FROM ElectronicMail LIMIT 50;
+
+--without limit this query returned 2004 entries.  without distinct there were 2300.
+
+
+
++------------------------------------+
+| (SUBSTRING_INDEX(content,'@', -1)) |
++------------------------------------+
+| dictumplacerat.com                 |
+| magnaetipsum.org                   |
+| loremutaliquam.com                 |
+| semperdui.com                      |
+| risusNuncac.ca                     |
+| rutrum.net                         |
+| commodohendrerit.co.uk             |
+| cursus.co.uk                       |
+| arcu.com                           |
+| ornare.com                         |
+| necimperdietnec.org                |
+| ametrisusDonec.org                 |
+| eleifend.org                       |
+| non.edu                            |
+| eutellus.net                       |
+| ligula.ca                          |
+| pedeetrisus.edu                    |
+| vestibulumMaurismagna.ca           |
+| etmagnis.org                       |
+| consectetuereuismodest.com         |
+| aliquet.edu                        |
+| vulputate.org                      |
+| tristiquepharetra.co.uk            |
+| lacus.net                          |
+| duiCumsociis.net                   |
+| Vestibulumuteros.org               |
+| pharetra.net                       |
+| ac.com                             |
+| iaculisneceleifend.co.uk           |
+| enimdiamvel.com                    |
+| musProinvel.ca                     |
+| enim.com                           |
+| erategetipsum.ca                   |
+| lectuspede.edu                     |
+| Nunc.edu                           |
+| sapien.com                         |
+| accumsansed.edu                    |
+| Mauris.com                         |
+| et.org                             |
+| ornare.org                         |
+| conguea.edu                        |
+| Namac.edu                          |
+| Vestibulum.net                     |
+| dolor.com                          |
+| massa.edu                          |
+| Mauris.org                         |
+| interdumSed.co.uk                  |
+| arcu.net                           |
+| pedePraesenteu.co.uk               |
+| anequeNullam.org                   |
++------------------------------------+
+50 rows in set (0.00 sec)
