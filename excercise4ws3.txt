@@ -1,0 +1,8 @@
+mysql> SELECT firstName FROM AddressBook JOIN Entry ON AddressBook.id = Entry.id WHERE AddressBook.name = "Pharetra Ut Limited";
++-----------+
+| firstName |
++-----------+
+| Miriam    |
+| Martin    |
++-----------+
+2 rows in set (0.01 sec)
