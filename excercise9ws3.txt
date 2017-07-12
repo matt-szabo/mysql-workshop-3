@@ -1,0 +1,65 @@
+Exercise 9
+
+(I used distinct here)
+
+List all of the cities within the countries of Canada, Austria, Isle of Man, Ireland and Japanmysql> SELECT DISTINCT(city) FROM Address WHERE country IN ('Canada','Austria','Isle of Man','Ireland','Japan');                                  +----------------+
+| city           |
++----------------+
+| Dubbo          |
+| Ceyhan         |
+| Jackson        |
+| Belfast        |
+| Tauranga       |
+| Rzeszów        |
+| Cartago        |
+| Cagnes-sur-Mer |
+| Houston        |
+| Galway         |
+| Pietraroja     |
+| Moulins        |
+| Anápolis       |
+| Assen          |
+| Shimla         |
+| İslahiye       |
+| Kailua         |
+| Edmundston     |
+| Satara         |
+| Angers         |
+| Siedlce        |
+| Chestermere    |
+| Tirrases       |
+| Zwickau        |
+| Horsham        |
+| Chartres       |
+| Rollegem       |
+| Kraków         |
+| Bremerhaven    |
+| Milena         |
+| Cork           |
+| Bozeman        |
+| Pontevedra     |
+| Bodmin         |
+| Ogbomosho      |
+| Denderbelle    |
+| Baulers        |
+| San Vicente    |
+| Alness         |
+| Springfield    |
+| Abbeville      |
+| San Francisco  |
+| Lasnigo        |
+| Nagaon         |
+| Terneuzen      |
+| Raj Nandgaon   |
+| Meridian       |
+| Mabompr�       |
+| Calmar         |
+| Hamburg        |
+| Quesada        |
+| Pabianice      |
+| Dover          |
+| Vienna         |
+| Berlin         |
+| Hillsboro      |
++----------------+
+56 rows in set (0.01 sec)
