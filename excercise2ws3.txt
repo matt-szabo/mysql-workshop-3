@@ -1,0 +1,18 @@
+mysql> SELECT * from Address LIMIT 10; --proof I have the new data intact
+
+
++----+---------+------+------------------------------+--------------+-------------+--------------------+-----------------------+------------+
+| id | entryID | type | addressLine1                 | addressLine2 | city        | province           | country               | postalCode |
++----+---------+------+------------------------------+--------------+-------------+--------------------+-----------------------+------------+
+|  1 |    2317 |      | 548-6031 Laoreet St.         | NULL         | Blenheim    | South Island       | Israel                | 1083EY     |
+|  2 |    2531 |      | Ap #332-3180 Est, Road       | NULL         | Napier      | North Island       | Oman                  | 602438     |
+|  3 |    3751 |      | 535-6203 Egestas. Rd.        | NULL         | Santa Inês  | MA                 | Vanuatu               | 9068       |
+|  4 |    3722 |      | 6917 Phasellus Rd.           | NULL         | Uyo         | AK                 | Tokelau               | 03194      |
+|  5 |    3304 |      | 5005 Lorem Rd.               | NULL         | Warrnambool | VIC                | Philippines           | 20124      |
+|  6 |    3238 |      | P.O. Box 408, 9391 Ipsum St. | NULL         | Cork        | Munster            | Puerto Rico           | 60192      |
+|  7 |    3455 |      | P.O. Box 422, 4842 Eu St.    | NULL         | Málaga      | Andalucía          | Algeria               | 60504      |
+|  8 |    3374 |      | P.O. Box 338, 9626 A, Av.    | NULL         | Thurso      | CA                 | Sao Tome and Principe | 57186      |
+|  9 |    2436 |      | Ap #371-6056 Dictum St.      | NULL         | Dutse       | JI                 | Vanuatu               | 2445       |
+| 10 |    2609 |      | 742-2985 Dolor Ave           | NULL         | Palmerston  | Northern Territory | Iraq                  | 212086     |
++----+---------+------+------------------------------+--------------+-------------+--------------------+-----------------------+------------+
+10 rows in set (0.19 sec)

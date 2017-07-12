@@ -1,0 +1,17 @@
+mysql> SELECT email FROM Account JOIN AddressBook ON Account.id = AddressBook.id WHERE AddressBook.accountId = "100";          
++--------------------------------------+
+| email                                |
++--------------------------------------+
+| elementum@massalobortisultrices.net  |
+| non.cursus@sitamet.ca                |
+| pharetra.ut@lacuspede.co.uk          |
+| Donec.porttitor.tellus@etnetus.ca    |
+| Cum@elementum.ca                     |
+| non.vestibulum@velitPellentesque.com |
+| egestas@magnaSuspendisse.org         |
+| urna.justo@nuncac.edu                |
+| nec.leo.Morbi@aliquet.edu            |
+| magna@natoque.edu                    |
+| Nunc@auguemalesuadamalesuada.net     |
++--------------------------------------+
+11 rows in set (0.00 sec)
