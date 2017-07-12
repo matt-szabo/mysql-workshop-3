@@ -1,0 +1,100 @@
+mysql> ALTER TABLE Entry DROP COLUMN subtype,DROP COLUMN 
+    -> contentLineOne,DROP COLUMN contentLineTwo,DROP COLUMN contentLineThree,DROP COLUMN contentLineFour,DROP COLUMN contentLineFive;
+Query OK, 4000 rows affected (0.06 sec)
+Records: 4000  Duplicates: 0  Warnings: 0
+
+mysql> describe Entry;
++---------------+-----------------------------+------+-----+---------+----------------+
+| Field         | Type                        | Null | Key | Default | Extra          |
++---------------+-----------------------------+------+-----+---------+----------------+
+| id            | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| addressBookId | int(11)                     | NO   |     | NULL    |                |
+| firstName     | varchar(255)                | NO   |     | NULL    |                |
+| lastName      | varchar(255)                | YES  |     | NULL    |                |
+| birthday      | datetime                    | YES  |     | NULL    |                |
+| type          | enum('home','work','other') | NO   |     | NULL    |                |
++---------------+-----------------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> describe Address;
++--------------+-------------------------------------------+------+-----+---------+----------------+
+| Field        | Type                                      | Null | Key | Default | Extra          |
++--------------+-------------------------------------------+------+-----+---------+----------------+
+| id           | int(11)                                   | NO   | PRI | NULL    | auto_increment |
+| entryID      | int(11)                                   | YES  |     | NULL    |                |
+| type         | enum('phone','address','electronic-mail') | YES  |     | NULL    |                |
+| addressLine1 | varchar(255)                              | YES  |     | NULL    |                |
+| addressLine2 | varchar(255)                              | YES  |     | NULL    |                |
+| city         | varchar(255)                              | YES  |     | NULL    |                |
+| province     | varchar(128)                              | YES  |     | NULL    |                |
+| country      | varchar(128)                              | YES  |     | NULL    |                |
+| postalCode   | varchar(10)                               | YES  |     | NULL    |                |
++--------------+-------------------------------------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)
+
+mysql> CREATE TABLE Phone (id INT AUTO_INCREMENT PRIMARY KEY, entryID INT, type ENUM('home','work','other'),subtype ENUM('landline','cellular','fax'),content VARCHAR(255));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE ElectronicMail (id INT AUTO_INCREMENT PRIMARY KEY, entryID INT, type ENUM('home','work','other'),content VARCHAR(255));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> describe ElectronicMail;
++---------+-----------------------------+------+-----+---------+----------------+
+| Field   | Type                        | Null | Key | Default | Extra          |
++---------+-----------------------------+------+-----+---------+----------------+
+| id      | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| entryID | int(11)                     | YES  |     | NULL    |                |
+| type    | enum('home','work','other') | YES  |     | NULL    |                |
+| content | varchar(255)                | YES  |     | NULL    |                |
++---------+-----------------------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+mysql> describe Phone;
++---------+-----------------------------------+------+-----+---------+----------------+
+| Field   | Type                              | Null | Key | Default | Extra          |
++---------+-----------------------------------+------+-----+---------+----------------+
+| id      | int(11)                           | NO   | PRI | NULL    | auto_increment |
+| entryID | int(11)                           | YES  |     | NULL    |                |
+| type    | enum('home','work','other')       | YES  |     | NULL    |                |
+| subtype | enum('landline','cellular','fax') | YES  |     | NULL    |                |
+| content | varchar(255)                      | YES  |     | NULL    |                |
++---------+-----------------------------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> describe Entry;
++---------------+-----------------------------+------+-----+---------+----------------+
+| Field         | Type                        | Null | Key | Default | Extra          |
++---------------+-----------------------------+------+-----+---------+----------------+
+| id            | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| addressBookId | int(11)                     | NO   |     | NULL    |                |
+| firstName     | varchar(255)                | NO   |     | NULL    |                |
+| lastName      | varchar(255)                | YES  |     | NULL    |                |
+| birthday      | datetime                    | YES  |     | NULL    |                |
+| type          | enum('home','work','other') | NO   |     | NULL    |                |
++---------------+-----------------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> DESCRIBE Address;
++--------------+-------------------------------------------+------+-----+---------+----------------+
+| Field        | Type                                      | Null | Key | Default | Extra          |
++--------------+-------------------------------------------+------+-----+---------+----------------+
+| id           | int(11)                                   | NO   | PRI | NULL    | auto_increment |
+| entryID      | int(11)                                   | YES  |     | NULL    |                |
+| type         | enum('phone','address','electronic-mail') | YES  |     | NULL    |                |
+| addressLine1 | varchar(255)                              | YES  |     | NULL    |                |
+| addressLine2 | varchar(255)                              | YES  |     | NULL    |                |
+| city         | varchar(255)                              | YES  |     | NULL    |                |
+| province     | varchar(128)                              | YES  |     | NULL    |                |
+| country      | varchar(128)                              | YES  |     | NULL    |                |
+| postalCode   | varchar(10)                               | YES  |     | NULL    |                |
++--------------+-------------------------------------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)
+
+mysql> 
+
+***************BULK DATA import  DONE, however this looks like the same data as in Workshop two
+
+Exercise 3
+
+List all of the countries with respective occurence totals in DESC order
+Country names should all appear lowercase
